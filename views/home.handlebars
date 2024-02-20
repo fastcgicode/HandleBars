@@ -1,4 +1,12 @@
 <h3>Home</h3>
-<div class="content">
-    <div>Why MVC is so important</div>
+{{#if results}}
+<div>
+    {{#each results}}
+    <div class="content">
+        <div>{{this.createdAt}}</div>
+        <div>{{this.author_name}}</div>
+        <div>{{this.blog_post}}</div>
+    </div>
+    {{/each}}
 </div>
+{{/if}}
